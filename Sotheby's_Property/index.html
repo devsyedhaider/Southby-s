@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- title -->
+    <title>370 & 372 Further Lane</title>
+    <link rel="stylesheet" href="./file/style.css" />
+    <script src="./file/index.js" defer></script>
+  </head>
+  <body>
+    <!-- Nav bar -->
+
+    <nav>
+      <!-- Cookie Notice -->
+      <div class="cookie-notice" id="cookieNotice">
+        <div class="row">
+          By using this site, you agree with our use of cookies.
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="row">
+          <button class="btn-ok" id="btnOk">OK</button>
+          <button class="btn-manage">Manage Preferences</button>
+        </div>
+      </div>
+
+      <!-- banner Navbar -->
+      <div class="banner-navbar">
+        <div class="banner row">
+          <a href="#" class="nav-link">Join / Log In</a>
+          <a href="#" class="nav-link flex"
+            ><ion-icon name="settings-outline" class="icon"></ion-icon>
+            Preferences</a
+          >
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="row">
+          <img src="./assets/imagereader.svg" alt="Logo" class="logo" />
+          <div class="hamburger-icon">&#9776;</div> 
+        </div>
+
+        <div class="sub-navbar row">
+          <a href="#" class="sub-nav-link flex-row" id="searchLink">
+            <ion-icon name="search-outline" class="icon"></ion-icon> SEARCH
+          </a>
+          <a href="#" class="sub-nav-link" id="PropertiesLink">PROPERTIES</a>
+          <a href="#" class="sub-nav-link" id="AgentsLink">AGENTS</a>
+          <a href="#" class="sub-nav-link" id="StoryLink">STORIES</a>
+          <a href="#" class="btn-sell">SELL WITH US</a>
+        </div>
+      </div>
+
+      <!-- Search Dropdown -->
+
+      <div class="search-dropdown hidden" id="searchDropdown">
+        <div class="search-container">
+          <div class="close">
+            <ion-icon
+              name="close-outline"
+              id="closeSearch"
+              class="closeicon"
+            ></ion-icon>
+          </div>
+
+          <div class="search-header">
+            <span class="search-link">BUY</span>
+            <span class="search-link">RENT</span>
+            <span class="search-link">SELL</span>
+            <span class="search-link">AGENTS</span>
+            <span class="search-link">BLOGS</span>
+          </div>
+          <div class="search-body">
+            <ion-icon name="search-outline"></ion-icon>
+
+            <input
+              type="text"
+              placeholder="Country, City, Address, Postal Code or ID"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Properties Dropdown -->
+
+      <div class="Properties-dropDown hidden" id="PropertiesDropDown">
+        <div class="Properties-container">
+          <div class="close">
+            <ion-icon
+              name="close-outline"
+              id="closeProperties"
+              class="closeicon"
+            ></ion-icon>
+          </div>
+
+          <div class="Properties_lists">
+            <div class="Properties_list">
+              <h3>Local</h3>
+              <ul>
+                <li><a href="#">Properties Near Me</a></li>
+              </ul>
+            </div>
+            <div class="Properties_list">
+              <h3>Worldwide</h3>
+              <ul>
+                <li><a href="#">View Properties Globally</a></li>
+                <li><a href="#">Properties by Lifestyle</a></li>
+                <li><a href="#">Properties by Destination</a></li>
+                <li><a href="#">Properties with Videos</a></li>
+                <li><a href="#">Properties with Virtual Reality</a></li>
+              </ul>
+            </div>
+            <div class="Properties_list">
+              <h3>Popular Cities</h3>
+              <ul>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">Los Angeles</a></li>
+                <li><a href="#">The Hamptons</a></li>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Dubai</a></li>
+                <li><a href="#">Paris</a></li>
+              </ul>
+            </div>
+            <div class="Properties_list">
+              <h3>New Developments</h3>
+              <ul>
+                <li><a href="#">Discover Projects</a></li>
+                <li><a href="#">Contact the Team</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agents Dropdown -->
+
+      <div class="Agents-dropDown hidden" id="AgentsDropDown">
+        <div class="Agents">
+          <div class="close">
+            <ion-icon
+              name="close-outline"
+              id="closeAgents"
+              class="closeicon"
+            ></ion-icon>
+          </div>
+
+          <div class="Agents-lists">
+            <div class="Agents-list">
+              <h3>Local</h3>
+              <ul>
+                <li><a href="#">Your Local Agents</a></li>
+                <li><a href="#">Your Local Offices</a></li>
+              </ul>
+            </div>
+            <div class="Agents-list">
+              <h3>Worldwide</h3>
+              <ul>
+                <li><a href="#">Search Agents Globally </a></li>
+                <li><a href="#">Search Offices Globally</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stories Dropdown -->
+
+      <div class="Stories-dropDown hidden" id="StoryDropDown">
+        <div class="Stories">
+          <div class="close">
+            <ion-icon
+              name="close-outline"
+              id="closeStory"
+              class="closeicon"
+            ></ion-icon>
+          </div>
+
+          <div class="Stories_main">
+            <div class="Stories_Explore">
+              <h3>Explore</h3>
+              <ul>
+                <li>
+                  <a href="#">Luxury Outlook</a>
+                  <a href="#">Blogs</a>
+                  <a href="#">Videos</a>
+                  <a href="#">Reside</a>
+                  <a href="#">Press</a>
+                </li>
+              </ul>
+            </div>
+            <div class="Stories_Reside">
+              <h4>LATEST IN RESIDE</h4>
+              <div class="Stories_lists">
+                <div class="Story_list">
+                  <img
+                    src="./assets/story/imagereader-1.webp"
+                    alt="imagereader"
+                  />
+                  <h2>Luxury Outlook</h2>
+                  <p>
+                    An ambitious exploration into <br />
+                    high-end residential markets <br />
+                    across the globe.
+                  </p>
+                  <a href="#" class="button">EXPLORE MORE </a>
+                </div>
+                <div class="Story_list">
+                  <img
+                    src="./assets/story/imagereader-2.webp"
+                    alt="imagereader"
+                  />
+                  <h2>RESIDE Magazine</h2>
+                  <p>
+                    Conceived in the belief that <br />
+                    home and living in full are <br />
+                    inextricably entwined.
+                  </p>
+                  <a href="#" class="button">EXPLORE MORE </a>
+                </div>
+                <div class="Story_list">
+                  <img
+                    src="./assets/story/imagereader-3.webp"
+                    alt="imagereader"
+                  />
+                  <h2>
+                    What’s New in Art, <br />
+                    Architecture & Design
+                  </h2>
+                  <p>
+                    Contemporary landscapes, party <br />
+                    barns, and bespoke home cocktail <br />
+                    bars are all the rage.
+                  </p>
+                  <a href="#" class="button">EXPLORE MORE </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+
+    <!-- SMALL BANNER -->
+
+    <div class="small_banner">
+      <p>SOTHEBY'S INTERNATIONAL REALTY LISTING</p>
+    </div>
+
+    <!-- Header -->
+
+    <header>
+      <div class="row2">
+        <div class="header_parent">
+          <h2>
+            370 & 372 Further Lane East Hampton, New York, 11937 United States
+          </h2>
+
+          <div class="header_line"></div>
+
+          <div class="header_btns">
+            <button class="header_btn flex">
+              <ion-icon
+                class="header_icon"
+                name="caret-forward-outline"
+              ></ion-icon>
+              VIDEO
+            </button>
+            <button class="header_btn flex">
+              <ion-icon class="header_icon" name="newspaper-outline"></ion-icon>
+              FLOORPLAN
+            </button>
+            <button class="header_btn flex">
+              <ion-icon class="header_icon" name="images-outline"></ion-icon> 36
+              PHOTOS
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="row2">
+      <div class="new_banner">
+        <h6 class="flex">
+          <ion-icon
+            class="new_banner-icon"
+            name="arrow-back-outline"
+          ></ion-icon>
+          Back
+        </h6>
+        <p>
+          370 & 372 Further Lane, East Hampton, New York, 11937 United States
+        </p>
+
+        <div class="new_banner-btns">
+          <button class="new_banner-btn flex">
+            <ion-icon class="new_banner-icon" name="bookmark-outline"></ion-icon
+            >SAVE
+          </button>
+          <button class="new_banner-btn flex" id="share">
+            <ion-icon
+              class="new_banner-icon"
+              name="share-social-outline"
+            ></ion-icon
+            >SHARE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="border_bottom"></div>
+
+    <div class="row2">
+      <div class="share_dropdown hidden" id="shareDropDown">
+        <ion-icon
+          class="share_icon flex"
+          name="close-outline"
+          id="shareClose"
+        ></ion-icon>
+        <a href="#">1.Facebook</a>
+        <a href="#">2.Instagram</a>
+        <a href="#">3.Twitter</a>
+        <a href="#">4.Linkedin</a>
+        <a href="#">5.Email</a>
+      </div>
+    </div>
+
+    <!-- DETAIL DIV -->
+
+    <div class="row2">
+      <div class="detail_div">
+        <h2>
+          370 & 372 Further Lane <br />
+          East Hampton, New York, 11937 United States
+        </h2>
+
+        <div class="header_btns">
+          <button class="header_btn flex">
+            <ion-icon
+              class="header_icon"
+              name="caret-forward-outline"
+            ></ion-icon>
+          </button>
+          <button class="header_btn flex">
+            <ion-icon class="header_icon" name="newspaper-outline"></ion-icon>
+          </button>
+          <button class="header_btn flex">
+            <ion-icon class="header_icon" name="images-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="detail_div-child">
+        <div class="detail_div-child-1">
+          <div>
+            <h5>PRICE</h5>
+            <p>$89,000,000 USD</p>
+          </div>
+
+          <div>
+            <h5>BEDROOMS</h5>
+            <p>5</p>
+          </div>
+
+          <div>
+            <h5>BATHROOMS</h5>
+            <p>
+              6 Full <br />
+              3 Partial
+            </p>
+          </div>
+
+          <div>
+            <h5>INTERIOR</h5>
+            <p>10,000 Sq Ft.</p>
+          </div>
+
+          <div>
+            <h5>EXTERIOR</h5>
+            <p>7.0 Acre(s)</p>
+          </div>
+        </div>
+
+        <div class="detail_div-user--p">
+          <div class="detail_div-user--img">
+            <img src="./assets/form/form.webp" height="108" alt="User Img" />
+          </div>
+
+          <div class="detail_div-user--detail">
+            <h4>Frank E Newbold</h4>
+            <button class="detail_div-btn flex">
+              SEND MESSAGE
+              <ion-icon
+                class="detail_div-user-icon"
+                name="arrow-forward-outline"
+              ></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="new_banner-btns detail_div-new-btns">
+        <button class="new_banner-btn flex">
+          <ion-icon class="new_banner-icon" name="bookmark-outline"></ion-icon
+          >SAVE
+        </button>
+        <button class="new_banner-btn flex" id="share">
+          <ion-icon
+            class="new_banner-icon"
+            name="share-social-outline"
+          ></ion-icon
+          >SHARE
+        </button>
+        <button class="new_banner-btn flex" id="share">
+          <ion-icon class="new_banner-icon" name="print-outline"></ion-icon
+          >PRINT
+        </button>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="share_dropdown hidden" id="shareDropDown">
+        <ion-icon
+          class="share_icon flex"
+          name="close-outline"
+          id="shareClose"
+        ></ion-icon>
+        <a href="#">1.Facebook</a>
+        <a href="#">2.Instagram</a>
+        <a href="#">3.Twitter</a>
+        <a href="#">4.Linkedin</a>
+        <a href="#">5.Email</a>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+
+    <section class="gallery">
+      <div class="row2">
+        <div class="gallery_parent">
+          <div class="gallery-1">
+            <img
+              src="./assets/gallery/photo1.webp"
+              class="gallery-img1"
+              width="650"
+              height="430"
+              alt="Home Photo 1"
+            />
+
+            <h4>Further Lane to the Ocean</h4>
+            <p>
+              Rare unobstructed Further-Lane-to-Atlantic-Ocean 7 acre compound
+              with absolute total privacy: High-style published 10,000 sq ft
+              oceanfront mansion by noted designer John Saladino with inland
+              barn guest house on sweeping parcel of open farmland (subdivided
+              to 2 lots) with 220 feet direct oceanfront in prime East Hampton
+              estate location. Premium quality custom design uses old brick,
+              hand-hewn beams, imported stone floors, plaster walls and custom
+              cabinetry. Dramatic triple-height entry, oversized 20 by 30 ft
+              beamed living room with 18 ft ceilings, gourmet kitchen with
+              professional appliances, connoisseur wine tasting room, luxury
+              primary suite, unobstructed waterviews from every room. Large
+              waterside terrace with wisteria-shaded dining pergola, fireplace,
+              55 ft heated pool, and private path to white sand beach. Inland
+              3350 sq ft authentic 19th century barn guest house (expandable to
+              10,000 sq ft) with oversized recreation room, open kitchen/dining,
+              2 bedroom suites, 3-car garage
+            </p>
+
+            <a href="#">Show More</a>
+          </div>
+
+          <div class="gallery-2">
+            <img
+              src="./assets/gallery/photo2.webp"
+              class="gallery-img2"
+              width="600"
+              height="430"
+              alt="Home Photo 1"
+            />
+            <div class="gallery_text">
+              <div class="flex">
+                <h3>Property details</h3>
+                <p class="horizontal-line"></p>
+              </div>
+
+              <div class="flex_col">
+                <span>property type</span>
+                <p>Single Family Homes</p>
+              </div>
+
+              <div class="flex_col">
+                <span>status</span>
+                <p>Available</p>
+              </div>
+
+              <div class="flex_col">
+                <span>year built</span>
+                <p>1990</p>
+              </div>
+
+              <div class="horizontal-lines"></div>
+
+              <div class="flex_col">
+                <span>Marketed by</span>
+                <p>
+                  Sotheby's International Reality - <br />
+                  East Hampton Brokerage
+                </p>
+              </div>
+
+              <a href="#" class="gallery_btn">learn about company</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities -->
+
+    <section class="Amenities row2">
+      <h1>Amenities & Lot Features</h1>
+      <div class="Amenities_lists">
+        <div class="amenities_list">
+          <h3>Listing Details</h3>
+          <div class="flex_col">
+            <p>Property ID</p>
+            <span>RMDHSR </span>
+          </div>
+          <div class="flex_col">
+            <p>MLS#</p>
+            <span>913525</span>
+          </div>
+          <div class="flex_col">
+            <p>Listing Price</p>
+            <span>$89,000,000 </span>
+          </div>
+          <div class="flex_col">
+            <p>Property type</p>
+            <span>Single Family Homes</span>
+          </div>
+          <div class="flex_col">
+            <p>Marketed By</p>
+            <span
+              >Sotheby's International Realty - <br />
+              East Hampton Brokerage
+            </span>
+          </div>
+        </div>
+        <div class="amenities_list">
+          <h3>Utilities & Building</h3>
+          <div class="flex_col">
+            <p>Year Built</p>
+            <span>1990 </span>
+          </div>
+          <div class="flex_col">
+            <p>total sqft</p>
+            <span>10,000 </span>
+          </div>
+          <div class="flex_col">
+            <p>Lot Size Unit</p>
+            <span>Acre(s) </span>
+          </div>
+          <div class="flex_col">
+            <p>Lot Size</p>
+            <span>7.0</span>
+          </div>
+          <div class="flex_col">
+            <p>cooling</p>
+            <span>Central A/C </span>
+          </div>
+        </div>
+        <div class="amenities_list">
+          <h3>Features</h3>
+          <div class="flex_col">
+            <p>Amenities</p>
+            <span
+              >Guest House, Pool, Outdoor Pool, <br />
+              4+ Fireplaces</span
+            >
+          </div>
+          <div class="flex_col">
+            <p>Full Bathrooms</p>
+            <span>6 </span>
+          </div>
+          <div class="flex_col">
+            <p>partial baths</p>
+            <span>3</span>
+          </div>
+          <div class="flex_col">
+            <p>Bedrooms</p>
+            <span>5</span>
+          </div>
+        </div>
+        <div class="amenities_list">
+          <h3>Additional Features</h3>
+          <div class="flex_col">
+            <p>Lot Features</p>
+            <span>Water View, Waterfront </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities 2 -->
+
+    <section class="Amenities_faqs row2">
+      <h1>Amenities & Lot Features</h1>
+      <div class="Amenities_faqs_aslists">
+        <div class="amenities_list">
+          <div class="amenities_head">
+            <h3>Listing Details</h3>
+            <ion-icon name="add-outline" class="faqs_icon"></ion-icon>
+          </div>
+          <div class="amenities_body">
+            <div class="flex_col">
+              <p>Property ID</p>
+              <span>RMDHSR </span>
+            </div>
+            <div class="flex_col">
+              <p>MLS#</p>
+              <span>913525</span>
+            </div>
+            <div class="flex_col">
+              <p>Listing Price</p>
+              <span>$89,000,000 </span>
+            </div>
+            <div class="flex_col">
+              <p>Property type</p>
+              <span>Single Family Homes</span>
+            </div>
+            <div class="flex_col">
+              <p>Marketed By</p>
+              <span
+                >Sotheby's International Realty - <br />
+                East Hampton Brokerage
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="amenities_list">
+          <div class="amenities_head">
+            <h3>Utilities & Building</h3>
+            <ion-icon name="add-outline" class="faqs_icon"></ion-icon>
+          </div>
+          <div class="amenities_body">
+            <div class="flex_col">
+              <p>Year Built</p>
+              <span>1990 </span>
+            </div>
+            <div class="flex_col">
+              <p>total sqft</p>
+              <span>10,000 </span>
+            </div>
+            <div class="flex_col">
+              <p>Lot Size Unit</p>
+              <span>Acre(s) </span>
+            </div>
+            <div class="flex_col">
+              <p>Lot Size</p>
+              <span>7.0</span>
+            </div>
+            <div class="flex_col">
+              <p>cooling</p>
+              <span>Central A/C </span>
+            </div>
+          </div>
+        </div>
+        <div class="amenities_list">
+          <div class="amenities_head">
+            <h3>Features</h3>
+            <ion-icon name="add-outline" class="faqs_icon"></ion-icon>
+          </div>
+          <div class="amenities_body">
+            <div class="flex_col">
+              <p>Amenities</p>
+              <span
+                >Guest House, Pool, Outdoor Pool, <br />
+                4+ Fireplaces</span
+              >
+            </div>
+            <div class="flex_col">
+              <p>Full Bathrooms</p>
+              <span>6 </span>
+            </div>
+            <div class="flex_col">
+              <p>partial baths</p>
+              <span>3</span>
+            </div>
+            <div class="flex_col">
+              <p>Bedrooms</p>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+        <div class="amenities_list">
+          <div class="amenities_head">
+            <h3>Additional Features</h3>
+            <ion-icon name="add-outline" class="faqs_icon"></ion-icon>
+          </div>
+          <div class="amenities_body">
+            <div class="flex_col">
+              <p>Lot Features</p>
+              <span>Water View, Waterfront </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+
+    <section class="form">
+      <div class="row2">
+        <div class="flex_form">
+          <div class="form_person">
+            <div class="person_head">
+              <img src="./assets/form/form.webp" alt="Person" />
+              <div class="person_text">
+                <h1>Frank E Newbold</h1>
+                <p>ASSOCIATE BROKER</p>
+                <div class="number">
+                  <a href="#">M: +1 631.375.4942</a>
+                  <a href="#">O: +1 631.324.6000</a>
+                </div>
+                <a href="#">Frank.Newbold@Sothebys.Realty</a>
+                <div class="person_office">
+                  <span>office </span>
+                  <a href="#"
+                    ><h2>
+                      Sotheby's International Realty - East <br />
+                      Hampton Brokerage
+                    </h2></a
+                  >
+                  <p>6 Main Street</p>
+                  <p>East Hampton, New York, 11937 United States Let's</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_getintouch">
+            <h1>Let's get in touch</h1>
+            <p>
+              Could not connect to the reCAPTCHA service. Please check your
+              internet connection and reload to get a reCAPTCHA challenge.
+            </p>
+            <form>
+              <div class="form_head">
+                <div class="flex_col">
+                  <input type="text" placeholder="First Name" required />
+                </div>
+                <div class="flex_col">
+                  <input type="text" placeholder="Last Name" required />
+                </div>
+              </div>
+              <div class="form_mid">
+                <div class="flex_col">
+                  <input type="email" placeholder="Email Address" required />
+                </div>
+                <div class="flex_col">
+                  <input type="text" placeholder="Phone Number (Optional)" />
+                </div>
+              </div>
+              <div class="flex_col top">
+                <label for="textarea">Message (Optional)</label>
+                <textarea
+                  name="message"
+                  placeholder="I'm Interested In The Property At 370 & 372 Further Lane"
+                ></textarea>
+              </div>
+              <div class="terms">
+                <p>
+                  By submitting this form, you acknowledge that you accept the
+                  Sotheby's International Realty
+                  <a href="#">Privacy Policy</a> and
+                  <a href="#">Terms of Use.</a>
+                </p>
+                <p>
+                  This site is protected by reCAPTCHA and the Google
+                  <a href="#">Privacy Policy</a> and
+                  <a href="#">Terms of Service</a> apply.
+                </p>
+                <button type="submit">SEND MESSAGE</button>
+                <p>
+                  Yes, I would like more information from Sotheby's
+                  International Realty. Please use and/or share my information
+                  with a Sotheby's International Realty agent to contact me
+                  about my real estate needs.
+                </p>
+                <p>
+                  By clicking SEND MESSAGE, I agree a Sotheby's International
+                  Realty Agent may contact me by phone or text message including
+                  by automated means about real estate services, and that I can
+                  access real estate services without providing my phone number.
+                  I acknowledge that I have read and agree to the
+                  <a href="#">Terms of Use</a> and
+                  <a href="#">Privacy Policy</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+
+    <section class="news">
+      <div class="row2">
+        <h1>In the News</h1>
+        <div class="news_content">
+          <div class="news_update">
+            <p>TUESDAY, AUGUST 6, 2024</p>
+            <a href="#">
+              <h1>Avenue, "Jaw-Dropping Properties in the Hamptons"</h1>
+            </a>
+            <p class="bold">Avenue</p>
+            <a href="#" class="btn">CONTINUE READING</a>
+          </div>
+          <div class="news_lists">
+            <div class="news_list bt">
+              <p>TUESDAY, JULY 23, 2024</p>
+              <a href="#">
+                <h2>
+                  Behind the Hedges, "Crème de la Crème of Luxury Real Estate:
+                  The Top 10 Priciest Properties in the Hamptons"
+                </h2>
+              </a>
+              <p>Behind the Hedges</p>
+            </div>
+            <div class="news_list">
+              <p>MONDAY, JULY 8, 2024</p>
+              <a href="#">
+                <h2>
+                  Behind the Hedges, "East Hampton Village Estate Lists for $89
+                  Million"
+                </h2>
+              </a>
+              <p>Behind the Hedges</p>
+            </div>
+            <div class="news_list">
+              <p>FRIDAY, JUNE 28, 2024</p>
+              <a href="#">
+                <h2>
+                  Robb Report, "This $89 Million Compound in the Hamptons Sits
+                  on a Sweeping Parcel of Farmland"
+                </h2>
+              </a>
+              <p>Robb Report</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer One -->
+
+    <footer class="footer_one">
+      <div class="row2">
+        <div class="footer_lists">
+          <div class="footer_list">
+            <h3>Popular City Searches</h3>
+            <p>find homes in these popular cities</p>
+            <div class="footer_child">
+              <div class="child">
+                <a href="#">New York</a>
+                <a href="#">Washington</a>
+                <a href="#">London</a>
+              </div>
+              <div class="child">
+                <a href="#">Miami</a>
+                <a href="#">Sydney</a>
+                <a href="#">Los Angeles</a>
+              </div>
+            </div>
+            <a href="#" class="footer_btn">see all city</a>
+          </div>
+
+          <div class="footer_list">
+            <h3>popular lifestyles</h3>
+            <p>find homes by these popular lifestyles</p>
+            <div class="footer_child">
+              <div class="child">
+                <a href="#">Waterfront</a>
+                <a href="#">Country Living</a>
+                <a href="#">Ski</a>
+              </div>
+              <div class="child">
+                <a href="#">Metropolitan</a>
+                <a href="#">Historic</a>
+                <a href="#">Beachfront</a>
+              </div>
+            </div>
+            <a href="#" class="footer_btn">see all lifestyles</a>
+          </div>
+
+          <div class="footer_list">
+            <h3>popular destinations</h3>
+            <p>find homes in these popular destinations</p>
+            <div class="footer_child">
+              <div class="child">
+                <a href="#">Africa</a>
+                <a href="#">Asia</a>
+                <a href="#">Caribbean</a>
+              </div>
+              <div class="child">
+                <a href="#">Canada</a>
+                <a href="#">Europe</a>
+                <a href="#">Middle East</a>
+              </div>
+            </div>
+            <a href="#" class="footer_btn">see all destinations</a>
+          </div>
+        </div>
+        <div class="footer_text">
+          <h3>About Sotheby’s International Realty Affiliates LLC</h3>
+          <p>
+            Founded in 1976 to provide independent brokerages with a powerful
+            marketing and referral program for luxury listings, the Sotheby's
+            International Realty network was designed to connect the finest
+            independent real estate companies to the most prestigious clientele
+            in the world. Sotheby's International Realty Affiliates LLC is a
+            subsidiary of Anywhere Real Estate Inc. (NYSE: HOUS), a global
+            leader in real estate franchising and provider of real estate
+            brokerage, relocation and settlement services. In February 2004,
+            Realogy entered into a long-term strategic alliance with Sotheby's,
+            the operator of the auction house. The agreement provided for the
+            licensing of the Sotheby's International Realty name and the
+            development of a full franchise system. Affiliations in the system
+            are granted only to brokerages and individuals meeting strict
+            qualifications. Sotheby's International Realty Affiliates LLC
+            supports its affiliates with a host of operational, marketing,
+            recruiting, educational and business development resources.
+            Franchise affiliates also benefit from an association with the
+            venerable Sotheby's auction house, established in 1744.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer Two -->
+
+    <footer class="footer_two">
+      <div class="row2">
+        <div class="Amenities_lists">
+          <div class="amenities_list">
+            <h2>Sotheby's International Realty</h2>
+            <a href="#">Contact Us </a>
+          </div>
+          <div class="amenities_list">
+            <h3>Company</h3>
+            <div class="two_list">
+              <a href="#">Luxury Outlook</a>
+              <a href="#">About Us</a>
+              <a href="#">Giving Back</a>
+              <a href="#">Press</a>
+              <a href="#">Join Us</a>
+              <a href="#">Luxury Real Estate</a>
+            </div>
+          </div>
+          <div class="amenities_list">
+            <h3>Apps</h3>
+            <div class="two_list">
+              <a href="#">SIR Mobile App</a>
+              <a href="#">SIR Apple TV App </a>
+              <a href="#">Virtual Reality</a>
+            </div>
+          </div>
+          <div class="amenities_list">
+            <h3>Sotheby's</h3>
+            <div class="two_list">
+              <a href="#">Auctions</a>
+              <a href="#">Diamonds</a>
+              <a href="#">Wine</a>
+              <a href="#">Institute of Art</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer faqs -->
+
+      
+
+        <div class="footer_two_list">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">Instagram </a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_text">
+          <a href="#" class="text">
+            <p class="footer_p">Do Not Sell or Share My Personal Information</p>
+          </a>
+          <a href="#" class="text">
+            <p class="footer_p">
+              Sotheby's International Realty's commitment to
+              <span> fair housing</span> laws,
+              <span>standard operating procedures,</span> and
+              <span>reasonable accommodations</span>.
+            </p>
+          </a>
+        </div>
+        <div class="footer_link">
+          <a href="#">Fair Housing Statement</a>
+          <a href="#">New York Fair Housing Statement</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Accessibility Statement</a>
+          <a href="#">Dmca Notice</a>
+          <a href="#">Contact Us</a>
+          <a href="#" class="last">SiteMap</a>
+        </div>
+        <div class="footer_copy">
+          <p>
+            Copyright © 2006-2024 Sotheby's International Realty Affiliates LLC.
+            All Rights Reserved.
+          </p>
+          <a href="#">
+            Texas Real Estate Commission Consumer Protection Notice
+          </a>
+          <p class="tops">
+            Sotheby's International Realty Affiliates LLC fully supports the
+            principles of the Fair Housing Act and the Equal Opportunity Act.
+            Each Office is Independently Owned and Operated. Sotheby's
+            International Realty, the Sotheby's International Realty logo, "For
+            the Ongoing Collection of Life" and RESIDE are registered (or
+            unregistered) service marks owned or licensed to Sotheby's
+            International Realty Affiliates LLC. The information set forth on
+            this site is based upon information which we consider reliable, but
+            because it has been supplied by third parties to our franchisees
+            (who in turn supplied it to us), we can not represent that it is
+            accurate or complete, and it should not be relied upon as such. The
+            offerings are subject to errors, omissions, changes, including
+            price, or withdrawal without notice. All dimensions are approximate
+            and have not been verified by the selling party and can not be
+            verified by Sotheby's International Realty Affiliates LLC. It is
+            recommended that you hire a professional in the business of
+            determining dimensions, such as an appraiser, architect or civil
+            engineer, to determine such information. Texas Real Estate
+            Commission Information About Brokerage Services The data relating to
+            real estate listings on this website comes in part from the Internet
+            Data Exchange (IDX) program of Multiple Listing Service of Southern
+            Arizona. IDX information is provided exclusively for consumers'
+            personal, non-commercial use and may not be used for any purpose
+            other than to identify prospective properties consumers may be
+            interested in purchasing. Listings provided by brokerages other than
+            [Russ Lyon Sotheby's International Realty] are identified with the
+            MLSSAZ IDX Logo. All Information Is Deemed Reliable But Is Not
+            Guaranteed Accurate. Listing information Copyright 2024 MLS of
+            Southern Arizona. All Rights Reserved.
+          </p>
+          <img src="./assets/footer.webp" alt="Sotheby" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
